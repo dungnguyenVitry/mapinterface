@@ -50,7 +50,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://travelpin-back.onrender.com",
+  "proxy": "https://travelpin-back.onrender.com/api",
   "devDependencies": {
     "@babel/core": "^7.22.20",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
