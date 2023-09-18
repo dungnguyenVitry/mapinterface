@@ -4,7 +4,7 @@ import axios from "axios";
 import { useRef, useState } from "react";
 import "./login.css";
 
-export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
+export default function Login({ setShowLogin, setCurrentUsername, myStorage }) {
   const [error, setError] = useState(false);
   const usernameRef = useRef();
   const passwordRef = useRef();
@@ -29,7 +29,7 @@ export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
     <div className="loginContainer">
       <div className="logo">
         <LocationOn className="logoIcon" />
-        <span>LamaPin</span>
+        <span>GomgomPin</span>
       </div>
       <form onSubmit={handleSubmit}>
         <input autoFocus placeholder="username" ref={usernameRef} />
