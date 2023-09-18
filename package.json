@@ -47,5 +47,9 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://mapbackend.onrender.com"
+  "proxy": "https://mapbackend.onrender.com",
+  "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20"
+  }
 }
