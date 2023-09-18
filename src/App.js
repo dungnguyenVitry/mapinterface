@@ -9,6 +9,8 @@ import "./app.css";
 // eslint-disable-next-line
 
 import { format } from 'timeago.js';
+// eslint-disable-next-line
+
 import Register from './components/Register';
 import Login from './components/Login';
 
