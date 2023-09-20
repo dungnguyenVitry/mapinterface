@@ -116,7 +116,7 @@ function App() {
         {pins.map(p =>
           <>
             <Marker longitude={p.long} latitude={p.lat} anchor="bottom" >
-              <LocationOnIcon style={{ color: p.username === currentUser ? "tomato" : "slateblue", cursor: 'pointer' }}
+              <LocationOnIcon style={{ color: p.username === currentUsername ? "tomato" : "slateblue", cursor: 'pointer' }}
                 onClick={() => handleMarkerClick(p._id, p.lat, p.long)}
               />
             </Marker>
