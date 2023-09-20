@@ -16,7 +16,7 @@ export default function Login({ setShowLogin, setCurrentUsername, myStorage }) {
       password: passwordRef.current.value,
     };
     try {
-      const res = await axios.post("http://travelpin-back.onrender.com/api/users/login", user);
+      const res = await axios.post("https://travelpin-back.onrender.com/api/users/login", user);
       setCurrentUsername(res.data.username);
       myStorage.setItem('user', res.data.username);
       setShowLogin(false)

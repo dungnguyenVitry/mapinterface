@@ -19,7 +19,7 @@ export default function Register({ setShowRegister }) {
             email: emailRef.current.value,
             password: passwordRef.current.value
         }; try {
-            const res = await axios.post("http://travelpin-back.onrender.com/api/pins/register", newUser); 
+            const res = await axios.post("https://travelpin-back.onrender.com/api/pins/register", newUser); 
             setError(false);
             setSuccess(true);
         } catch (error) {
