@@ -71,7 +71,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPin = {
-      username: currentUser,
+      username: currentUsername,
       title,
       description,
       rating,
