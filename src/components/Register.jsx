@@ -19,7 +19,7 @@ export default function Register({ setShowRegister }) {
             email: emailRef.current.value,
             password: passwordRef.current.value
         }; try {
-            const res = await axios.post("users/register", newUser); 
+            const res = await axios.post("https://travelpin-back.onrender.com/api/users/register", newUser);
             setError(false);
             setSuccess(true);
         } catch (error) {
@@ -27,21 +27,21 @@ export default function Register({ setShowRegister }) {
         }
     }
 
-  return (
-    <div className="registerContainer">
-        <div className="logo">
-            <LocationOn/>
-            GomgomPin
+    return (
+        <div className="registerContainer">
+            <div className="logo">
+                <LocationOn />
+                GomgomPin
+            </div>
+            <form onSubmit={handleSubmit}>
+                <input type="text" placeholder="username" ref={nameRef} />
+                <input type="email" placeholder="email" ref={emailRef} />
+                <input type="password" placeholder="password" ref={passwordRef} />
+                <button className="registerBtn">Register</button>
+                {success && <span className="success">Successfull. You can login now!</span>}
+                {error && <span className="failure">Something went wrong!</span>}
+            </form>
+            <CancelIcon className="registerCancel" onClick={() => setShowRegister(false)} />
         </div>
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="username" ref = {nameRef}/>
-            <input type= "email" placeholder="email" ref = {emailRef}/>
-            <input type="password" placeholder="password" ref = {passwordRef}/>
-            <button className="registerBtn">Register</button>
-            {success && <span className="success">Successfull. You can login now!</span>}
-            {error && <span className="failure">Something went wrong!</span>}
-        </form>
-        <CancelIcon className="registerCancel" onClick={() => setShowRegister(false)}/>
-    </div>
-  )
+    )
 }
